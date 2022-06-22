@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  db:
+    restart: always
+  app:
+    restart: always
+    build:
+      target: production
+    expose:
+      - 8000
+    volumes:
+      # disable bind mount
+      - /usr/src/app
+  nginx:
+    restart: always
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - app

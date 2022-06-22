@@ -1,0 +1,32 @@
+### https://raw.githubusercontent.com/github/gitignore/fbc053fe49d7f3b4a882ddf9651fc60f8954db21/Go.gitignore
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Go workspace file
+go.work
+
+### Project specific
+
+# macOS
+.DS_Store
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Binary files
+out/
